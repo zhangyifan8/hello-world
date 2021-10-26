@@ -1,0 +1,17 @@
+CREATE TABLE `account` (
+	`id` INT (11) NOT NULL AUTO_INCREMENT,
+	`account` VARCHAR (60),
+	`password` VARCHAR (60),
+	`work_id` INT(9),
+	 PRIMARY KEY (`id`)
+)ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE question (
+	id INT(11) NOT NULL AUTO_INCREMENT,
+	title VARCHAR(60),
+	TYPE INT(1),      #0==单选题  1==多选题
+	PRIMARY KEY(id)
+)ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+INSERT INTO question VALUES(NULL,"你喜欢吃什么早餐?",0),(NULL,"你喜欢什么运动",1);
+SELECT id,title,TYPE FROM question ORDER BY id
